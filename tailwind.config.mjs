@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      container: {
+        center: "true",
+        padding: "1rem",
+      },
+
       colors: {
         primary: {
           100: "hsl(217, 28%, 15%)",
@@ -24,8 +30,8 @@ export default {
       },
 
       fontFamily: {
-        primary: ["Open Sans", "sans-serif"],
-        secondary: ["Raleway", "sans-serif"],
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        display: ["Raleway", "sans-serif"],
       },
 
       // screens: {
