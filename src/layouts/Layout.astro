@@ -1,5 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
+import "@fontsource-variable/open-sans";
+import "@fontsource-variable/raleway";
 
 interface Props {
   title: string;
@@ -18,7 +20,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class="bg-primary-200 font-primary text-white">
+  <body class="bg-primary-200 text-white">
     <Header />
     <slot />
   </body>
