@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import illustratitionStay from "@/assets/illustrations/illustration-stay-productive.png";
+---
+
+<section>
+  <div class="container flex flex-col lg:flex-row md:items-center md:gap-8">
+    <Image src={illustratitionStay} alt="Stay Prouductive Illustration" />
+    <div class="flex flex-col gap-6">
+      <h2 class="font-raleway text-2xl font-bold md:text-3xl">
+        Stay productive, wherever you are
+      </h2>
+      <div class="flex flex-col gap-3">
+        <p>
+          Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.
+        </p>
+        <p>
+          Securely share files and folders with friends, family and colleagues
+          for live collaboration. No email attachments required.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="item-center group relative flex w-fit justify-start gap-2 pb-1 text-accent-100 transition-colors duration-300 after:absolute after:bottom-0 after:h-[1.5px] after:w-full after:bg-accent-100 hover:text-white hover:after:bg-white"
+      >
+        <span>See how Fylo works</span>
+        <i
+          class="fas fa-arrow-right size-4 translate-y-[.2rem] rounded-full bg-accent-100 text-center text-[.6rem] leading-4 text-black transition-colors duration-300 group-hover:bg-white"
+        ></i>
+      </a>
+    </div>
+  </div>
+</section>
