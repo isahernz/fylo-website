@@ -3,6 +3,9 @@ import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/Hero.astro";
 import Features from "@/components/Features.astro";
 import Productive from "@/components/Productive.astro";
+import Testimonial from "@/components/Testimonial.astro";
+import Newsletter from "@/components/Newsletter.tsx";
+import Footer from "@/components/Footer.astro";
 ---
 
 <Layout
@@ -11,5 +14,8 @@ import Productive from "@/components/Productive.astro";
 >
   <Hero />
   <Features />
-  <Productive/>
+  <Productive />
+  <Testimonial />
+  <Newsletter client:visible />
+  <Footer />
 </Layout>
