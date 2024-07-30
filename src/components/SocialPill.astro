@@ -1,0 +1,16 @@
+---
+interface Props {
+  href: string;
+  label: string;
+}
+
+const { href, label } = Astro.props;
+---
+
+<a
+  class="border rounded-full size-10 grid place-content-center"
+  href={href}
+  aria-label={label}
+>
+  <slot />
+</a>

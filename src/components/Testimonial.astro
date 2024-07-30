@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import TestimonialCard from "./TestimonialCard.astro";
+import Quotes from "@/assets/bg-quotes.png";
+import { TESTIMONIALS } from "@/consts/testimonials";
+---
+
+<section class="container">
+  <div class="relative z-10 flex flex-col md:grid md:grid-cols-3 gap-6">
+    <Image
+      class="absolute left-0 -top-8 -z-10"
+      src={Quotes}
+      alt="Icono de comentarios"
+    />
+    {
+      TESTIMONIALS.map((testimonial) => (
+        <TestimonialCard
+          name={testimonial.name}
+          avatar={testimonial.avatar}
+          position={testimonial.position}
+          comment={testimonial.text}
+        />
+      ))
+    }
+  </div>
+</section>

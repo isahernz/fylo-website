@@ -1,0 +1,22 @@
+---
+interface Props {
+  text: string;
+  redirection?: string;
+  class?: string;
+}
+
+const { redirection, text, class: className } = Astro.props;
+---
+
+<div class={`flex items-center gap-4 ${className}`}>
+  <slot />
+  {
+    redirection ? (
+      <a href={redirection} class="text-pretty text-sm">
+        {text}
+      </a>
+    ) : (
+      <p class="text-pretty text-sm">{text}</p>
+    )
+  }
+</div>
